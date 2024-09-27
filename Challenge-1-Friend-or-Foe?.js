@@ -11,5 +11,5 @@ Output = {}
 Input strings will only contain letters. Note: keep the original order of the names in the output.*/
 
 function friend(friends){
-  return friends.filter(x=>x.length===4);
+  return friends.filter(x => x.length === 4);
 }
