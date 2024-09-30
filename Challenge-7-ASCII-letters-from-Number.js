@@ -1,12 +1,19 @@
+/*You have to create a function that converts integer given as string into ASCII uppercase letters or spaces.
+
+All ASCII characters have their numerical order in table.
+
+For example,
+
+from ASCII table, character of number 65 is "A".
+Numbers will be next to each other, So you have to split given number to two digit long integers.
+
+Examples (input -> output)
+'658776' -> 'AWL' (because in ASCII table 'A' is 65, 'W' is 87, 'L' is 76)
+'73327673756932858080698267658369' ->'I LIKE UPPERCASE'*/
+
 function convert(number){
-  // ...Convert integers given as string into ASCII uppercase letters...
-  const str = '733276';
-const arr = str.match(/.{1,2}/g);
-console.log(arr)
-
-for (const i of arr){
-  console.log(String.fromCharCode(i))
-}
+    const arr = number.match(/.{1,2}/g); // It splits into substrings of 2 items each.
+    return arr.map(x => String.fromCharCode(x)).join(""); // It converts those numbers into ASCII uppercase letters.
 }
 
-// Still in progress.....
+
